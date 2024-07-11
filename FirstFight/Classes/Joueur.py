@@ -2,11 +2,11 @@
 import random as r
 
 class Joueur:
-    def __init__(self, name=None):
-        if name is None:
-            self.name = input("Entrez votre nom: ")
+    def __init__(self, nom=None):
+        if nom is None:
+            self.nom = input("Entrez votre nom: ")
         else:
-            self.name = name
+            self.nom = nom
         self.hp = 100
         self.armure = 0
         self.attaque = 10
@@ -48,6 +48,10 @@ class Joueur:
         if self.hp > 100:
             self.hp = 100
         return soins  # Retourne les points de vie restaures
+    def mediter(self):
+        self.energie += 3
+        if self.energie > 5:
+            self.energie = 5
 
     def prendre_degats(self, degat):
         self.hp -= degat
