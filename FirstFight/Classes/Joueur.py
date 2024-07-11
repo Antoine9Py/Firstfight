@@ -17,8 +17,7 @@ class Joueur:
     def attaque_normale(self):
         if self.energie - 2 < 0:
             print("Pas assez d'energie pour faire cela !")
-            print("Vous vous préparez à encaisser le coup, mais vous regagnez 2 d'énergie !")
-            self.energie += 2
+            print("Vous vous préparez à encaisser le coup..")
             return 0
         else : 
             self.energie -= 2
@@ -31,8 +30,7 @@ class Joueur:
     def attaque_lourde(self):
         if self.energie - 3 < 0:
             print("Pas assez d'energie pour faire cela !")
-            print("Vous vous préparez à encaisser le coup, mais vous regagnez 2 d'énergie !")
-            self.energie += 2
+            print("Vous vous préparez à encaisser le coup..")
             return 0
         else : 
             self.energie -= 3

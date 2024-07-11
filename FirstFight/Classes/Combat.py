@@ -40,10 +40,10 @@ def combat(joueur, ennemi):
         if ennemi.hp > 0:
             if r.choice([True, False]):
                 degats = ennemi.dague()
-                print(f"L'ennemi attaque avec une dague et inflige {degats} degats.")
+                print(f"L'ennemi attaque avec une dague et inflige {degats +(degats * tour//10)} degats.")
             else:
                 degats = ennemi.epee()
-                print(f"L'ennemi attaque avec une epee et inflige {degats} degats.")
+                print(f"L'ennemi attaque avec une epee et inflige {degats+(degats * tour//10)} degats.")
             
             joueur_en_vie = joueur.prendre_degats(degats)
             if not joueur_en_vie:
